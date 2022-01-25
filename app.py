@@ -88,6 +88,10 @@ The killer feature of `markdown-it` is very effective support of
 
 see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
 
+### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
+
+- 19^th^
+- H~2~O
 '''
 # aqui un comentario hola
 
