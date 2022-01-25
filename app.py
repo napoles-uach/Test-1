@@ -92,6 +92,13 @@ see [how to change output](https://github.com/markdown-it/markdown-it-emoji#chan
 
 - 19^th^
 - H_2O
+
+### [Custom containers](https://github.com/markdown-it/markdown-it-container)
+
+::: warning
+*here be dragons*
+:::
+
 '''
 # aqui un comentario hola
 
