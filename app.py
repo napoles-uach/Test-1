@@ -91,7 +91,7 @@ see [how to change output](https://github.com/markdown-it/markdown-it-emoji#chan
 ### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
 
 - 19^th^
-- H~2~O
+- H_2_O
 '''
 # aqui un comentario hola
 
