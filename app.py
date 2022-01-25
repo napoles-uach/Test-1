@@ -7,8 +7,6 @@ Podemos ir escribiendo
 * uno
 * dos
 * tres
-
-
 '''
 # aqui un comentario hola
 
