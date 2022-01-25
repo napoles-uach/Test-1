@@ -1,13 +1,16 @@
 import streamlit as st
 '''
+---
+__Advertisement :)__
 
-aqui algo
+- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
+  resize in browser.
+- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
+  i18n with plurals support and easy syntax.
 
-Podemos ir escribiendo 
+You will like those projects!
 
-* uno
-* dos
-* tres
+---
 '''
 # aqui un comentario hola
 
