@@ -1,5 +1,5 @@
 import streamlit as st
-st.buttoon()
+st.button()
 '''
 #que onda
 ---
