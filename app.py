@@ -1,7 +1,7 @@
 import streamlit as st
 st.write('ola ke ase')
 '''
-# que onda dude
+
 ---
 __Advertisement :)__
 
