@@ -1,6 +1,6 @@
 import streamlit as st
 st.write('ola ke ase')
-st.balloons()
+
 '''
 # hello there!
 ---
