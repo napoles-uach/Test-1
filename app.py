@@ -7,7 +7,7 @@ st.balloons()
 
 idd='1dMYGzZXZ05gpF5gE0ClFIBNLrkH3Zq_x'
 os.popen('gdown --id '+idd)
-st.write('SugoIgwUKV.gif')
+st.image('SugoIgwUKV.gif')
 
 '''
 # hello there drive2!
