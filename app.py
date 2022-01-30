@@ -2,6 +2,7 @@ import streamlit as st
 import os
 import gdown
 st.write('ola ke ase')
+st.check('Check here')
 st.button('click')
 st.balloons()
 
