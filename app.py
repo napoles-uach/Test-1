@@ -1,8 +1,8 @@
 import streamlit as st
 import os
 import gdown
-st.write('ola ke ase')
-st.checkbox('Check here')
+#st.write('ola ke ase')
+st.sidebar.checkbox('Check here')
 st.button('click')
 st.balloons()
 
