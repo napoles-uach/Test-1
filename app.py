@@ -2,9 +2,9 @@ import streamlit as st
 import os
 import gdown
 st.title('Hola Mundo')
-#st.sidebar.checkbox('Check here')
-#st.button('click')
-#st.balloons()
+st.sidebar.checkbox('Check here')
+st.button('click')
+st.balloons()
 
 #idd='1dMYGzZXZ05gpF5gE0ClFIBNLrkH3Zq_x'
 #os.popen('gdown --id '+idd)
