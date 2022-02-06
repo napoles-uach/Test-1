@@ -45,4 +45,4 @@ with open('code.py','w') as f:
 with col1:
     runpy.run_path('code.py')
 
-st.code(, language='python')
+st.code(st.session_state.code_list, language='python')
