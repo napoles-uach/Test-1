@@ -45,4 +45,5 @@ with open('code.py','w') as f:
 with col1:
     runpy.run_path('code.py')
 
+code_string = '\n'.join(sentence)
 st.code(st.session_state.code_list, language='python')
