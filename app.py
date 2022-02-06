@@ -44,3 +44,5 @@ with open('code.py','w') as f:
 
 with col1:
     runpy.run_path('code.py')
+
+st.code()
