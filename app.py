@@ -45,6 +45,7 @@ with open('code.py','w') as f:
 with col1:
     runpy.run_path('code.py')
 
-with st.expander("See explanation"):
-    code_string = '\n'.join(st.session_state.code_list)
-st.code(code_string, language='python')
+
+code_string = '\n'.join(st.session_state.code_list)
+with st.expander("See your co"):
+    st.code(code_string, language='python')
