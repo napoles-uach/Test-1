@@ -1,117 +1,34 @@
 import streamlit as st
 import os
-import gdown
-st.title('Hola Mundo')
-st.sidebar.checkbox('Check here')
-st.button('click')
-st.balloons()
-
-#idd='1dMYGzZXZ05gpF5gE0ClFIBNLrkH3Zq_x'
-#os.popen('gdown --id '+idd)
-#st.image('SugoIgwUKV.gif')
-
-'''
-Saludos
----
-__Advertisement :)__
-
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
-
-You will like those projects!
-
----
-# h1 Heading 
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
-## Emphasis
-
-**This is bold text**
-
-__This is bold text__
-
-*This is italic text*
-
-_This is italic text_
-
-~~Strikethrough~~
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
+import runpy
+#from utils import stwidget
 
 
-Block code "fences"
 
-```
-Sample text here...
-```
-Syntax highlighting
-
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
-## Tables
-
-| Option | Description |
-| ------ | ----------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-## Images
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
-
-## Plugins
-
-The killer feature of `markdown-it` is very effective support of
-[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
+st.set_page_config(page_title="Streamlit App", page_icon="🤖",layout="wide")
+widgets = ['title','header','subheader','image','text','button','checkbox','slider','text_input','number_input']
 
 
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
+#if selection equal a number, then show that number
+#code_list=[]
+#two columns usint st.beta_columns
+col1,col2 = st.columns([6,2])
+select_widget=col2.selectbox('select',widgets)
+if 'code_list' not in st.session_state:
+    st.session_state.code_list = []
+with col2.form('form'):
+    is_sidebar = st.checkbox('sidebar')
+    label = st.text_input('label or text')
+    wid = stwidget(select_widget,is_sidebar,label)   
+    subm= st.form_submit_button('submit')
+    if subm:        
+        st.session_state.code_list.append(wid.get_code())
 
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
+#write code_list to a file with each line as a code snippet
+with open('code.py','w') as f:
+    f.write('import streamlit as st\n')
+    for code in st.session_state.code_list:
+        f.write(code+'\n')      
 
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19^th^
-- H_2O
-
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-::: warning
-*here be dragons*
-:::
-
-'''
-# aqui un comentario hola
-
-
+with col1:
+    runpy.run_path('code.py')
