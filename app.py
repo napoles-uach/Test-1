@@ -18,7 +18,7 @@ class stwidget:
     return code
 
 st.set_page_config(page_title="Streamlit App", page_icon="🤖",layout="wide")
-widgets = ['title','header','subheader','image','text','button','checkbox','slider','text_input','number_input','camera']
+widgets = ['title','header','subheader','image','text','button','checkbox','slider','text_input','number_input','camera_input']
 
 
 #if selection equal a number, then show that number
