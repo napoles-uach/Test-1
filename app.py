@@ -47,5 +47,5 @@ with col1:
 
 
 code_string = '\n'.join(st.session_state.code_list)
-with st.expander("See your co"):
+with st.expander("See your code"):
     st.code(code_string, language='python')
