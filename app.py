@@ -3,7 +3,19 @@ import os
 import runpy
 #from utils import stwidget
 
+class stwidget:
+  def __init__(self,kind,sidebar,name):
+    self.kind = kind
+    self.sidebar = sidebar
+    self.name = name
+  def get_code(self):
+    if self.sidebar==True:
+      code = f"st.sidebar.{self.kind}('{self.name}')"
+    else:
+      code = f"st.{self.kind}('{self.name}')"
 
+
+    return code
 
 st.set_page_config(page_title="Streamlit App", page_icon="🤖",layout="wide")
 widgets = ['title','header','subheader','image','text','button','checkbox','slider','text_input','number_input']
