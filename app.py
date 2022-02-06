@@ -46,4 +46,4 @@ with col1:
     runpy.run_path('code.py')
 
 code_string = '\n'.join(st.session_state.code_list)
-st.code(st.session_state.code_list, language='python')
+st.code(code_string, language='python')
