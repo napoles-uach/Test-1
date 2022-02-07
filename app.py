@@ -46,7 +46,12 @@ with col1:
     runpy.run_path('code.py')
 
 
+options = st.multiselect(
+     'What are your favorite colors',
+     ['Green', 'Yellow', 'Red', 'Blue'],
+     ['Yellow', 'Red'])
 
+st.write('You selected:', options)
 #code_string = '\n'.join(st.session_state.code_list)
 #with st.expander("See your code"):
 #    st.code(code_string, language='python')
