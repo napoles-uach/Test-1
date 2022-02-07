@@ -48,8 +48,8 @@ with col1:
 
 options = st.multiselect(
      'What are your favorite colors',
-     ['Green', 'Yellow', 'Red', 'Blue'],
-     ['Yellow', 'Red'])
+     st.session_state.code_list,
+     st.session_state.code_list)
 
 st.write('You selected:', options)
 #code_string = '\n'.join(st.session_state.code_list)
