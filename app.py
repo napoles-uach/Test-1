@@ -43,7 +43,7 @@ code_lines = st.multiselect(
 #write code_list to a file with each line as a code snippet
 with open('code.py','w') as f:
     f.write('import streamlit as st\n')
-    for code in #st.session_state.code_list:
+    for code in code_lines:#st.session_state.code_list:
         f.write(code+'\n')      
 
 with col1:
