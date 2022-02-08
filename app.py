@@ -38,7 +38,7 @@ with col2.form('form'):
 
 with col2:
     code_lines = st.multiselect(
-     'What are your favorite colors',
+     'your code',
      st.session_state.code_list,
      st.session_state.code_list)
 #write code_list to a file with each line as a code snippet
