@@ -36,7 +36,8 @@ with col2.form('form'):
     if subm:        
         st.session_state.code_list.append(wid.get_code())
 
-code_lines = st.multiselect(
+with col1:
+    code_lines = st.multiselect(
      'What are your favorite colors',
      st.session_state.code_list,
      st.session_state.code_list)
