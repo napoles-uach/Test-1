@@ -36,22 +36,23 @@ with col2.form('form'):
     if subm:        
         st.session_state.code_list.append(wid.get_code())
 
+code_lines = st.multiselect(
+     'What are your favorite colors',
+     st.session_state.code_list,
+     st.session_state.code_list)
 #write code_list to a file with each line as a code snippet
 with open('code.py','w') as f:
     f.write('import streamlit as st\n')
-    for code in st.session_state.code_list:
+    for code in #st.session_state.code_list:
         f.write(code+'\n')      
 
 with col1:
     runpy.run_path('code.py')
 
 
-options = st.multiselect(
-     'What are your favorite colors',
-     st.session_state.code_list,
-     st.session_state.code_list)
 
-st.write('You selected:', options)
+
+#st.write('You selected:', options)
 #code_string = '\n'.join(st.session_state.code_list)
 #with st.expander("See your code"):
 #    st.code(code_string, language='python')
