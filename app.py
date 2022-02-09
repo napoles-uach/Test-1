@@ -36,15 +36,15 @@ with col2.form('form'):
     if subm:        
         st.session_state.code_list.append(wid.get_code())
 
-with col2:
-    code_lines = st.multiselect(
-     'your code',
-     st.session_state.code_list,
-     st.session_state.code_list)
+#with col2:
+#    code_lines = st.multiselect(
+#     'your code',
+#     st.session_state.code_list,
+#     st.session_state.code_list)
 #write code_list to a file with each line as a code snippet
 with open('code.py','w') as f:
     f.write('import streamlit as st\n')
-    for code in code_lines:#st.session_state.code_list:
+    for code in st.session_state.code_list:
         f.write(code+'\n')      
 
 with col1:
